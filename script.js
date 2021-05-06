@@ -4,17 +4,24 @@ let rules = []
 let transactions = []
 
 function appendTransactionsToTable() {
-    console.log("got to function")
-    for(let i = 0; i < transactions.length; i++) {
-        console.count("looping")
-        const transaction = `<tr data-transaction-number=${i}>
+    for (let i = 0; i < transactions.length; i++) {
+        const transaction = $(`<tr class="transaction-row" data-transaction-number=${i}>
             <td>${transactions[i].Description}</td>
             <td>${transactions[i]["Transaction Date"]}</td>
-        </tr>`;
-        console.log(transaction);
+        </tr>`);
+        // transaction.click(function(){
+        //     console.log("clicked");
+        //     console.log($(this).data("transaction-number"));
+        // })
         $("#beancount-table").append(transaction)
 
     }
+    $(".transaction-row").on("click", function () {
+        const transaction = transactions[$(this).data("transaction-number")];
+        $('#transaction-details').
+
+
+    })
 
 }
 
