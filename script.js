@@ -18,7 +18,8 @@ function appendTransactionsToTable() {
     }
     $(".transaction-row").on("click", function () {
         const transaction = transactions[$(this).data("transaction-number")];
-        $('#transaction-details').
+        console.log(transaction);
+        $('#transaction-details').html(transaction.Amount)
 
 
     })
