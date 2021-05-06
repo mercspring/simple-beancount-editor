@@ -1,0 +1,12 @@
+    [
+        {
+            "keyword" : "albertsons",
+            "account" : "Expenses:Groceries",
+            "description" : "Groceries - Albertsons"
+        },
+        {
+            "keyword" : "trader",
+            "account" : "Expenses:Groceries",
+            "description" : "Groceries - Trader Joe's"
+        }
+    ]
