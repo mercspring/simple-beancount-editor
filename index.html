@@ -8,16 +8,32 @@
     <link rel="stylesheet" href="./style.css">
     <title>All Frontend Beancount Editor</title>
 </head>
-<!-- Input a csv file -->
-<input type="file" accept=".csv" id="csv-input">
-<!-- Input a rules file -->
-<input type="file" accept=".json" id="rules-input">
-<!-- Input settings value (accounts, etc) -->
+
 <body>
+    <header>
+        <!-- Input a csv file -->
+        <input type="file" accept=".csv" id="csv-input">
+        <!-- Input a rules file -->
+        <input type="file" accept=".json" id="rules-input">
+        <!-- Input settings value (accounts, etc) -->
+        <!-- Display the csv data as beancount-->
+    </header>
+    <main id="transaction-table">
+    <table id="beancount-table">
+        <tr>
+            <th>Description</th>
+            <th>Date</th>
+        </tr>
+    </table>
+</main>
+<div id="transaction-details">
+
+</div>
+
     <script src="./script.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <script src="https://cdn.tutorialjinni.com/jquery-csv/1.0.11/jquery.csv.min.js"></script>
+    <script src="https://cdn.tutorialjinni.com/jquery-csv/1.0.11/jquery.csv.min.js"></script>
 </body>
 
 </html>
