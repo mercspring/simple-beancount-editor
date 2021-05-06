@@ -1,3 +1,15 @@
+#flex-container{
+    display: flex;
+}
 #transaction-table{
+    background-color: forestgreen;
+    min-width: 20vw;
+    flex-grow: 1
 
+
+}
+
+#transaction-details{
+    background-color: aquamarine;
+    flex-grow: 3
 }
