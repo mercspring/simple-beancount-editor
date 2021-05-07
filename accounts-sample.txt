@@ -1,0 +1,39 @@
+2020-05-19 open Assets:WSECU:Checking USD
+2020-05-19 open Assets:WSECU:Savings USD
+2020-05-19 open Income:OddJobs USD
+2020-05-19 open Income:Chase:Interest USD
+2020-05-19 open Assets:Cash-on-Hand USD
+2020-05-19 open Income:WSECU:Interest USD
+2020-05-19 open Assets:Chase:Plus-Savings USD
+2020-05-19 open Assets:Chase:Checking USD
+2020-05-19 open Assets:OCBC:Checking USD
+2020-05-19 open Assets:Chase:Savings USD
+2020-05-19 open Equity:Opening-Balances USD
+2020-05-21 open Expenses:Food:Groceries USD
+2020-05-21 open Expenses:Alcohol USD
+2020-05-21 open Expenses:Transport:Gas USD
+2020-05-21 open Expenses:Transport:Parking USD
+2020-05-21 open Expenses:Gifts USD
+2020-05-21 open Expenses:Clothing USD
+2020-05-21 open Expenses:Entertainment:VideoGames USD
+2020-05-21 open Expenses:Entertainment:Other USD
+2020-05-21 open Expenses:Entertainment:Climbing USD
+2020-05-21 open Expenses:CreditCards USD
+2020-05-21 open Expenses:Food:EatingOut:Coffee USD
+2020-05-21 open Expenses:Food:EatingOut:Restraunt USD
+2020-05-21 open Expenses:Food:EatingOut:Other USD
+2020-05-21 open Liabilities:CreditCard:ChaseSlate USD
+2020-05-21 open Liabilities:PersonalLoan:Nash USD
+2020-05-21 open Liabilities:PersonalLoan:Dad USD
+2020-05-21 open Liabilities:CreditCard:ChaseFreedom USD
+2020-05-21 open Expenses:Misc:PersonalProducts USD
+2020-05-21 open Expenses:Education:Mari:AdminFees
+2020-05-21 open Expenses:Education:Mari
+2020-05-21 open Expenses:Education:Mercury
+2020-05-21 open Expenses:Car:Repairs
+2020-05-21 open Expenses:Car:New
+2020-05-21 open Income:Gifts USD
+2020-05-21 open Expenses:Utilities:Phone USD
+2020-05-21 open Expenses:Transport:Insurance USD
+2020-05-21 open Equity:Refund USD
+2020-05-21 open Expenses:Misc USD
