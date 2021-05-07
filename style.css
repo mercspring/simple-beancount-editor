@@ -20,6 +20,10 @@
     width: 20rem;
     /* grid-auto-rows: 100px; */
 }
+
+.select-wrapper{
+    width: 10rem;
+}
 .description{
     grid-column: 2 / 3;
     grid-row: 1;

@@ -25,6 +25,15 @@ function appendTransactionsToTable() {
 
 }
 
+function poplulateDrawnAccount(){
+    for (let i = 0; i < accounts.length; i++){
+        const option = $(`<option value=${accounts[i]}>${accounts[i]} </option>`)
+        $('#drawn-account').append(option);
+    }
+}
+
+
+// File input Handlers
 csvFile.onchange = event => {
     csvFile.files[0].text().then(function (text) {
         console.log(text);
@@ -53,7 +62,8 @@ accountsFile.onchange = event => {
             } else {
                 return null
             }
-        })
-        console.log(accounts.filter(line => line))
+        }).filter(line => line && line.match(/Liabilities|Assets/))
+        poplulateDrawnAccount();
+
     })
 }
