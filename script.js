@@ -1,7 +1,9 @@
 const csvFile = document.getElementById("csv-input");
 const rulesFile = document.getElementById("rules-input");
-let rules = []
-let transactions = []
+const accountsFile = document.getElementById("accounts-input");
+let rules = [];
+let transactions = [];
+let accounts = [];
 
 function appendTransactionsToTable() {
     for (let i = 0; i < transactions.length; i++) {
@@ -25,6 +27,7 @@ function appendTransactionsToTable() {
 
 csvFile.onchange = event => {
     csvFile.files[0].text().then(function (text) {
+        console.log(text);
         transactions = $.csv.toObjects(text);
 
         console.log(transactions);
@@ -36,5 +39,21 @@ rulesFile.onchange = event => {
     rulesFile.files[0].text().then(function (text) {
         rules = JSON.parse(text);
         console.log(rules);
+    })
+}
+
+accountsFile.onchange = event => {
+    accountsFile.files[0].text().then(function (text) {
+        const linesOfText = text.split('\n');
+        console.log(text.split('\n'));
+        accounts = linesOfText.map(line => {
+            const match = line.match(/(?<=open ).*?(?= )/)
+            if (match) {
+                return match[0]
+            } else {
+                return null
+            }
+        })
+        console.log(accounts.filter(line => line))
     })
 }
