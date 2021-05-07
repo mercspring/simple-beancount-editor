@@ -14,7 +14,7 @@ function appendTransactionsToTable() {
             <td>${transactions[i]["Transaction Date"]}</td>
         </tr>`);
 
-        if(transactions[i].account != 'No Account'){
+        if (transactions[i].account != 'No Account') {
             transaction.addClass('blue');
         } else {
             transaction.addClass('red');
@@ -40,14 +40,14 @@ function appendTransactionsToTable() {
 
 }
 
-function alphabetizeAccounts(a,b){
+function alphabetizeAccounts(a, b) {
     var nameA = a.toUpperCase(); // ignore upper and lowercase
     var nameB = b.toUpperCase(); // ignore upper and lowercase
     if (nameA < nameB) {
-      return -1; //nameA comes first
+        return -1; //nameA comes first
     }
     if (nameA > nameB) {
-      return 1; // nameB comes first
+        return 1; // nameB comes first
     }
     return 0;  // names must be equal
 }
@@ -68,6 +68,26 @@ function populateDrawnAccount() {
         $('#drawn-account').append(option);
     }
 }
+
+function generateBeancount() {
+    let beancountText = '';
+
+    let drawnAccount = $('#drawn-account').val()
+    for (let i = 0; i < transactions.length; i++) {
+        const beancountTransaction = `${transactions[i]["Transaction Date"]} * ${transactions[i].Description}` + '\n' +
+                                    `${transactions[i].account}                     ${transactions[i].Amount * 1}` + '\n' +
+                                    `${drawnAccount}                                ${transactions[i].Amount * 1}` + '\n'
+        console.log("tranaction", beancountTransaction);
+
+        beancountText += beancountTransaction;
+
+    }
+    $('#beancount-output').html(beancountText);
+}
+
+$('#generate-beancount').click(function () {
+    generateBeancount();
+})
 
 $('#drawn-account').on('change', function () {
     $('.account-two').html($('#drawn-account').val())
@@ -107,7 +127,7 @@ $('#apply-rules-button').click(function () {
         for (let i = 0; i < transactions.length; i++) {
             for (let j = 0; j < rules.length; j++) {
                 const pattern = new RegExp(rules[j].keyword, 'i');
-                console.log(rules[j].keyword, transactions[i].Description)
+                // console.log(rules[j].keyword, transactions[i].Description)
                 if (pattern.test(transactions[i].Description)) {
                     if (rules[j].account != '') {
                         transactions[i].account = rules[j].account;

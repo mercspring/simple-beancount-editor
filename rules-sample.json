@@ -41,7 +41,12 @@
             "keyword" : "hmart",
             "account" : "Expenses:Food:Groceries",
             "description" : "Groceries - Hmart"
+        }, {
+            "keyword" : "vertical world",
+            "account" : "Expenses:Entertainment:Climbing",
+            "description" : "Climbing Gym Membership"
         }
+
 
 
     ]
