@@ -9,17 +9,14 @@ function appendTransactionsToTable() {
             <td>${transactions[i].Description}</td>
             <td>${transactions[i]["Transaction Date"]}</td>
         </tr>`);
-        // transaction.click(function(){
-        //     console.log("clicked");
-        //     console.log($(this).data("transaction-number"));
-        // })
         $("#beancount-table").append(transaction)
 
     }
     $(".transaction-row").on("click", function () {
         const transaction = transactions[$(this).data("transaction-number")];
         console.log(transaction);
-        $('#transaction-details').html(transaction.Amount)
+        $('#transaction-details .description').html(transaction.Description)
+        $('#transaction-details .date').html(transaction["Transaction Date"])
 
 
     })

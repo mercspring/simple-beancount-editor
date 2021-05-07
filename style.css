@@ -10,6 +10,48 @@
 }
 
 #transaction-details{
-    background-color: aquamarine;
     flex-grow: 3
+}
+
+.grid-wrapper{
+    background-color: aquamarine;
+    display: grid;
+    grid-template-columns: 10rem 10rem 10rem;
+    width: 20rem;
+    /* grid-auto-rows: 100px; */
+}
+.description{
+    grid-column: 2 / 3;
+    grid-row: 1;
+    background-color: blueviolet;
+}
+
+.date{
+    grid-column: 1;
+    grid-row: 1;
+
+}
+.account-one{
+    grid-column: 1;
+    grid-row: 2;
+    background-color: grey;
+
+}
+
+.account-two{
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.amount-one{
+    grid-column: 3;
+    grid-row: 2;
+    text-align: end;
+
+}
+
+.amount-two{
+    grid-column: 3;
+    grid-row: 3;
+    text-align: end;
 }
