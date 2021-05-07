@@ -40,6 +40,18 @@ function appendTransactionsToTable() {
 
 }
 
+function alphabetizeAccounts(a,b){
+    var nameA = a.toUpperCase(); // ignore upper and lowercase
+    var nameB = b.toUpperCase(); // ignore upper and lowercase
+    if (nameA < nameB) {
+      return -1; //nameA comes first
+    }
+    if (nameA > nameB) {
+      return 1; // nameB comes first
+    }
+    return 0;  // names must be equal
+}
+
 function populateAccounts() {
 
     for (let i = 0; i < accounts.length; i++) {
@@ -120,7 +132,7 @@ accountsFile.onchange = event => {
             } else {
                 return null
             }
-        }).filter(line => line)
+        }).filter(line => line).sort(alphabetizeAccounts);
         populateDrawnAccount();
         populateAccounts();
 

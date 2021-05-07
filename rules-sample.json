@@ -5,8 +5,43 @@
             "description" : "Groceries - Albertsons"
         },
         {
-            "keyword" : "trader",
+            "keyword" : "trader joe",
             "account" : "Expenses:Food:Groceries",
             "description" : "Groceries - Trader Joe's"
+        },
+        {
+            "keyword" : "fred meyer",
+            "account" : "Expenses:Food:Groceries",
+            "description" : "Groceries - Fred Meyer"
+        },
+        {
+            "keyword" : "99 ranch",
+            "account" : "Expenses:Food:Groceries",
+            "description" : "Groceries - 99 Ranch"
+        },
+        {
+            "keyword" : "chevron",
+            "account" : "Expenses:Transport:Gas",
+            "description" : "Gas"
+        }, {
+            "keyword" : "instacart",
+            "account" : "Expenses:Food:Groceries",
+            "description" : "Groceries - Instacart"
+
+        }, {
+            "keyword" : "Payment Thank You",
+            "account" : "Assets:Chase:Checking",
+            "description" : "Paid off credit card"
+
+        }, {
+            "keyword" : "Wal-mart",
+            "account" : "Expenses:Food:Groceries",
+            "description" : "Groceries - Walmart"
+        }, {
+            "keyword" : "hmart",
+            "account" : "Expenses:Food:Groceries",
+            "description" : "Groceries - Hmart"
         }
+
+
     ]
