@@ -17,6 +17,8 @@
         <input type="file" accept=".json" id="rules-input">
         <!-- Input settings value (accounts, etc) -->
         <input type="file" accept=".txt" id="accounts-input">
+        <!-- Button to apply rules -->
+        <button id="apply-rules-button">Apply Rules</button>
         <!-- Input account to be drawn from -->
         <div class="select-wrapper">
             <select id="drawn-account">
@@ -40,8 +42,10 @@
                 <div class="date"> date </div>
                 <div class="description"> description </div>
                 <div class="account-one">
-                    account one
+                    <select id="account-select">
+                        <option value="No Account">Select an Account</option>
 
+                    </select>
                 </div>
 
                 <div class="account-two">
