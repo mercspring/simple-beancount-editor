@@ -17,8 +17,10 @@ function appendTransactionsToTable() {
     $(".transaction-row").on("click", function () {
         const transaction = transactions[$(this).data("transaction-number")];
         console.log(transaction);
-        $('#transaction-details .description').html(transaction.Description)
-        $('#transaction-details .date').html(transaction["Transaction Date"])
+        $('#transaction-details .description').html(transaction.Description);
+        $('#transaction-details .date').html(transaction["Transaction Date"]);
+        $('#transaction-details .amount-one').html(transaction.Amount * -1);
+        $('#transaction-details .amount-two').html(transaction.Amount * 1);
 
 
     })
@@ -26,11 +28,16 @@ function appendTransactionsToTable() {
 }
 
 function poplulateDrawnAccount(){
-    for (let i = 0; i < accounts.length; i++){
+    const drawnAccounts = accounts.filter(line => line.match(/Liabilities|Assets/))
+    for (let i = 0; i < drawnAccounts.length; i++){
         const option = $(`<option value=${accounts[i]}>${accounts[i]} </option>`)
         $('#drawn-account').append(option);
     }
 }
+
+$('#drawn-account').on('change', function(){
+    $('.account-two').html($('#drawn-account').val())
+})
 
 
 // File input Handlers
@@ -64,6 +71,7 @@ accountsFile.onchange = event => {
             }
         }).filter(line => line && line.match(/Liabilities|Assets/))
         poplulateDrawnAccount();
+        populateAccounts();
 
     })
 }
