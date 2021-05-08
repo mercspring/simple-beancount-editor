@@ -112,6 +112,9 @@ csvFile.onchange = event => {
         transactions = $.csv.toObjects(text);
         transactions = transactions.map(transaction => {
             transaction.account = 'No Account';
+            if(transaction.Date){
+                transaction["Transaction Date"] = transaction.Date
+            }
             return transaction;
         })
 
