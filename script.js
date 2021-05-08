@@ -116,6 +116,9 @@ csvFile.onchange = event => {
             if(transaction.Date){
                 transaction["Transaction Date"] = transaction.Date
             }
+            if(transaction['Posting Date']){
+                transaction["Transaction Date"] = transaction["Posting Date"]
+            }
             return transaction;
         })
 

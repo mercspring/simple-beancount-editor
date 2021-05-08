@@ -13,7 +13,7 @@
 }
 
 #transaction-details{
-    flex-grow: 3
+    flex-grow: 3;
 }
 
 .grid-wrapper{
@@ -23,6 +23,9 @@
     max-width: 40rem;
     border: black 3px solid;
     padding: 0.3rem;
+
+    top: 1rem;
+    position:sticky
 }
 
 .select-wrapper{
