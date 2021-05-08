@@ -6,10 +6,10 @@
     flex-grow: 1
 }
 .blue{
-    background-color: blue;
+    background-color: lightseagreen;
 }
 .red{
-    background-color: red;
+    background-color: lightcoral;
 }
 
 #transaction-details{
@@ -17,10 +17,12 @@
 }
 
 .grid-wrapper{
-    background-color: aquamarine;
+    background-color: lightblue;
     display: grid;
-    grid-template-columns: 10rem 10rem 10rem;
-    width: 20rem;
+    grid-template-columns: 10rem 10rem 20rem;
+    max-width: 40rem;
+    border: black 3px solid;
+    padding: 0.3rem;
 }
 
 .select-wrapper{
@@ -29,18 +31,18 @@
 .description{
     grid-column: 2 / span 3;
     grid-row: 1;
-    background-color: blueviolet;
+    background-color: whitesmoke;
 }
 
 .date{
     grid-column: 1;
     grid-row: 1;
+    background-color: whitesmoke;
 
 }
 .account-one{
     grid-column: 1 / span 2;
     grid-row: 2;
-    background-color: grey;
 
 }
 
