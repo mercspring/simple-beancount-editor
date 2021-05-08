@@ -30,7 +30,7 @@ function appendTransactionsToTable() {
         currentTransaction = $(this).data("transaction-number")
         const transaction = transactions[currentTransaction];
         console.log(transaction, currentTransaction);
-        $('#transaction-details .description').html(transaction.Description);
+        $('#transaction-details .description').val(transaction.Description);
         $('#transaction-details .date').html(transaction["Transaction Date"]);
         $('#transaction-details .amount-one').html(transaction.Amount * -1);
         $('#transaction-details .amount-two').html(transaction.Amount * 1);
@@ -75,8 +75,8 @@ function generateBeancount() {
     let drawnAccount = $('#drawn-account').val()
     for (let i = 0; i < transactions.length; i++) {
         const beancountTransaction = `${transactions[i]["Transaction Date"]} * ${transactions[i].Description}` + '\n' +
-                                    `${transactions[i].account}                     ${transactions[i].Amount * 1}` + '\n' +
-                                    `${drawnAccount}                                ${transactions[i].Amount * 1}` + '\n'
+            `${transactions[i].account}                     ${transactions[i].Amount * -1}` + '\n' +
+            `${drawnAccount}                                ${transactions[i].Amount * 1}` + '\n'
         console.log("tranaction", beancountTransaction);
 
         beancountText += beancountTransaction;
@@ -97,6 +97,11 @@ $('#account-select').on('change', function () {
 
     console.log($(this).val());
     transactions[currentTransaction].account = $('#account-select').val();
+    appendTransactionsToTable();
+})
+
+$('#transaction-details .description').on('change', function(){
+    transactions[currentTransaction].Description = $('#transaction-details .description').val();
     appendTransactionsToTable();
 })
 
@@ -131,6 +136,7 @@ $('#apply-rules-button').click(function () {
                 if (pattern.test(transactions[i].Description)) {
                     if (rules[j].account != '') {
                         transactions[i].account = rules[j].account;
+                        transactions[i].Description = rules[j].description;
                     }
                 }
             }
