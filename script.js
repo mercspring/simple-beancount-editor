@@ -32,8 +32,8 @@ function appendTransactionsToTable() {
         console.log(transaction, currentTransaction);
         $('#transaction-details .description').val(transaction.Description);
         $('#transaction-details .date').html(transaction["Transaction Date"]);
-        $('#transaction-details .amount-one').html(transaction.Amount * -1);
-        $('#transaction-details .amount-two').html(transaction.Amount * 1);
+        $('#transaction-details .amount-one').html((transaction.Amount * -1).toFixed(2));
+        $('#transaction-details .amount-two').html((transaction.Amount * 1).toFixed(2));
         // $('.account-one').attr("data-transaction-number", transactionNumber);
         $('#account-select').val(transaction.account);
     })
@@ -75,8 +75,8 @@ function generateBeancount() {
     let drawnAccount = $('#drawn-account').val()
     for (let i = 0; i < transactions.length; i++) {
         const beancountTransaction = `${transactions[i]["Transaction Date"]} * "${transactions[i].Description}"` + '\n' +
-            `${transactions[i].account}                     ${transactions[i].Amount * -1}` + '\n' +
-            `${drawnAccount}                                ${transactions[i].Amount * 1}` + '\n'
+            `${transactions[i].account}                     ${(transactions[i].Amount * -1).toFixed(2)}` + '\n' +
+            `${drawnAccount}                                ${(transactions[i].Amount * 1).toFixed(2)}` + '\n'
         console.log("tranaction", beancountTransaction);
 
         beancountText += beancountTransaction;

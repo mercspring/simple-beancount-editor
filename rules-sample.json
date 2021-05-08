@@ -45,7 +45,12 @@
             "keyword" : "vertical world",
             "account" : "Expenses:Entertainment:Climbing",
             "description" : "Climbing Gym Membership"
+        },{
+            "keyword" : "winco",
+            "account" : "Expenses:Food:Groceries",
+            "description" : "Groceries - Winco"
         }
+
 
 
 
