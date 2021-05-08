@@ -49,7 +49,20 @@
             "keyword" : "winco",
             "account" : "Expenses:Food:Groceries",
             "description" : "Groceries - Winco"
-        }
+        },{
+            "keyword" : "shell oil",
+            "account" : "Expenses:Transport:Gas",
+            "description" : "Gas"
+        },{
+            "keyword" : "safeway",
+            "account" : "Expenses:Food:Groceries",
+            "description" : "Groceries - Safeway"
+        }, {
+            "keyword" : "mint mobile",
+            "account" : "Expenses:Utilities:Phone",
+            "description" : "Phone Bill"
+        } 
+ 
 
 
 

@@ -27,11 +27,11 @@
 2020-05-21 open Liabilities:PersonalLoan:Dad USD
 2020-05-21 open Liabilities:CreditCard:ChaseFreedom USD
 2020-05-21 open Expenses:Misc:PersonalProducts USD
-2020-05-21 open Expenses:Education:Mari:AdminFees
-2020-05-21 open Expenses:Education:Mari
-2020-05-21 open Expenses:Education:Mercury
-2020-05-21 open Expenses:Car:Repairs
-2020-05-21 open Expenses:Car:New
+2020-05-21 open Expenses:Education:Mari:AdminFees USD
+2020-05-21 open Expenses:Education:Mari USD
+2020-05-21 open Expenses:Education:Mercury USD
+2020-05-21 open Expenses:Car:Repairs USD
+2020-05-21 open Expenses:Car:New USD
 2020-05-21 open Income:Gifts USD
 2020-05-21 open Expenses:Utilities:Phone USD
 2020-05-21 open Expenses:Transport:Insurance USD

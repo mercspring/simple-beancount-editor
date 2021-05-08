@@ -74,9 +74,10 @@ function generateBeancount() {
 
     let drawnAccount = $('#drawn-account').val()
     for (let i = 0; i < transactions.length; i++) {
-        const beancountTransaction = `${transactions[i]["Transaction Date"]} * "${transactions[i].Description}"` + '\n' +
-            `${transactions[i].account}                     ${(transactions[i].Amount * -1).toFixed(2)} USD` + '\n' +
-            `${drawnAccount}                                ${(transactions[i].Amount * 1).toFixed(2)} USD` + '\n'
+        const date = new Date(transactions[i]["Transaction Date"])
+        const beancountTransaction = `${date.getFullYear() + "-" + ("0" + (date.getMonth() + 1)).slice(-2) + "-" + ("0" + (date.getDate() + 1)).slice(-2)} * "${transactions[i].Description}"` + '\n' +
+            `\t${transactions[i].account}                     ${(transactions[i].Amount * -1).toFixed(2)} USD` + '\n' +
+            `\t${drawnAccount}                                ${(transactions[i].Amount * 1).toFixed(2)} USD` + '\n'
         console.log("tranaction", beancountTransaction);
 
         beancountText += beancountTransaction;
