@@ -75,8 +75,8 @@ function generateBeancount() {
     let drawnAccount = $('#drawn-account').val()
     for (let i = 0; i < transactions.length; i++) {
         const beancountTransaction = `${transactions[i]["Transaction Date"]} * "${transactions[i].Description}"` + '\n' +
-            `${transactions[i].account}                     ${(transactions[i].Amount * -1).toFixed(2)}` + '\n' +
-            `${drawnAccount}                                ${(transactions[i].Amount * 1).toFixed(2)}` + '\n'
+            `${transactions[i].account}                     ${(transactions[i].Amount * -1).toFixed(2)} USD` + '\n' +
+            `${drawnAccount}                                ${(transactions[i].Amount * 1).toFixed(2)} USD` + '\n'
         console.log("tranaction", beancountTransaction);
 
         beancountText += beancountTransaction;
